@@ -1,0 +1,54 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Create New Listings</h3>
+        <form method="post" action="/listings" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" placeholder="enter catchy title" class="form-control" required>
+                <div class="valid-feedback">Title looks good.</div>
+            </div>
+           
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea type="text" name="listing[description]" placeholder="write description"  class="form-control" required></textarea>
+                <div class="invalid-feedback">Please write short description.</div>
+            </div>
+            
+           <div class="mb-3">
+                <label for="image" class="form-label">Image url</label>
+                <input type="text" name="listing[image]" placeholder="enter an image URL/Link"  class="form-control">
+                <div class="valid-feedback">You can also upload an image link.</div>
+           </div>
+            
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" name="listing[price]" placeholder="enter price"  class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid price.</div>
+            </div>
+            
+            <div class="mb-3 col-md-8">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" name="listing[location]" placeholder="enter location"  class="form-control" required>
+                <div class="invalid-feedback">Location should be valid.</div>
+            </div>
+            
+           
+        </div>
+        <div class="mb-3">
+            <label for="history" class="form-label">History</label>
+            <input type="text" name="listing[history]"  placeholder="enter history"  class="form-control" required>
+            <div class="valid-feedback">your history is good.</div>
+            <div class="invalid-feedback">write some previous history.</div>
+        </div>
+            <button class="btn btn-dark add-btn">Add</button>
+            <br> <br>
+        </form>
+    </div>
+    </div>
+    
+
+</body>
