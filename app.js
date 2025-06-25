@@ -13,6 +13,8 @@ import passport from "passport";
 import LocalStrategy from "passport-local";
 import User from "./models/user.js";
 import userRouter from "./routes/user.js"
+import "dotenv/config"
+
 const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
 const app=express();
@@ -43,7 +45,6 @@ main().then(()=>{
 async function main(){
     await mongoose.connect(MONGO_URL);
 }
-
 app.get("/",(req,res)=>{
     res.send("Root is working");
 });

@@ -7,9 +7,8 @@ const listingSchema=new mongoose.Schema({
     },
     description:String,
     image:{
-        type:String,
-        default:"https://unsplash.com/photos/the-golden-gate-bridge-spans-a-bay-HnQ21X8Gc7U",
-        set:(v) => v===""?"https://unsplash.com/photos/the-golden-gate-bridge-spans-a-bay-HnQ21X8Gc7U":v
+       url:String,
+       filename:String,
     },
     price:Number,
     location:String,
