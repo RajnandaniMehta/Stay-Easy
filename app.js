@@ -44,7 +44,7 @@ main().then(()=>{
 });
 
 async function main(){
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(MONGO_URL,{dbName:"Stay_Easy"});
 }
 app.get("/",(req,res)=>{
     res.send("Root is working");
