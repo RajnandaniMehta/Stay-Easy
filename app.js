@@ -41,7 +41,8 @@ main().then(()=>{
     console.log("Connected to DB");
 }).catch((err) =>{
     console.log(err);
-})
+});
+
 async function main(){
     await mongoose.connect(MONGO_URL);
 }
@@ -77,6 +78,6 @@ app.use((err,req,res,next)=>{
     let {statusCode=500,message="Internal server error"}=err;
     res.status(statusCode).render("errror.ejs",{err});
 })
-app.listen(8000,()=>{
+app.listen(4000,()=>{
     console.log("server is running");
 });
