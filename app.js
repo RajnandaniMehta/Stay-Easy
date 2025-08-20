@@ -46,9 +46,9 @@ main().then(()=>{
 async function main(){
     await mongoose.connect(MONGO_URL,{dbName:"Stay_Easy"});
 }
-app.get("/",(req,res)=>{
-    res.send("Root is working");
-});
+// app.get("/",(req,res)=>{
+//     res.send("Root is working");
+// });
 
 app.use(session(seesionOptions));
 app.use(flash());
